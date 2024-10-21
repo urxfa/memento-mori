@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    border: 1px solid #444;
+    max-width: 750px;
+    width: 100%;
+    animation: fadeInContainer 1.5s ease-out;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s linear;
+    letter-spacing: 2px;
+}
+
+.life {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.block {
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block h2 {
+    margin-bottom: 10px;
+    color: #f5a623;
+}
+
+.month-container {
+    display: grid;
+    grid-template-columns: repeat(12, 10px);
+    gap: 2px;
+}
+
+.month {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.month-lived {
+    background-color: #f9a826;
+    animation: fadeIn 2s linear;
+    border-radius: 2px;
+}
+
+.month-lived:hover {
+    transform: scale(1.2);
+}
+
+.month-tolive {
+    background-color: #ddd;
+    animation: fadeIn 2s linear;
+    border-radius: 2px;
+}
+
+.month-tolive:hover {
+    transform: scale(1.2);
+    background-color: #777;
+}
+
+button {
+    background-color: #f9a826;
+    color: #0d0d0d;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #c67a18;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.printable {
+    background-color: white;
+    color: black;
+}
+
+.printable .container {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.printable h1 {
+    color: black;
+}
+
+.printable .block h2 {
+    color: black;
+}
+
+.printable .month-lived {
+    background-color: black;
+    border: 1px solid black;
+}
+
+.printable .month-tolive {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.printable .block {
+    border: 1px solid black;
+}
